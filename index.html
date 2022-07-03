@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 decode</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/base64.js"></script>      
+  </head>
+  <style>
+    a{
+      text-decoration: none;
+    }
+    .container {
+      width: auto;
+      max-width: 680px;
+    }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <div class="container">
+        <form>
+          <div class="form-group text-center mt-5">
+            <h1>Insira o código base64:</h1><br>
+            <textarea type="text" class="form-control-lg w-100 mt-3" id="textarea" rows="5"  placeholder="Digite aqui..." required></textarea><br>
+            <select class="form-select w-25 mt-3" id="menu">
+              <option value="png">PNG</option>
+              <option value="jpg">JPG</option>
+              <option value="jpeg">JPEG</option>
+              <option value="bmp">BMP</option>
+              <option value="gif">GIF</option>
+              <option value="doc">DOC</option>
+              <option value="docx">DOCX</option>
+              <option value="pdf">PDF</option>
+            </select>
+            <button onClick="decode_base64()" type="button" class="btn btn-primary w-25 mt-5">Decode</button>
+            <button onClick="download_archive()" type="button" class="btn btn-danger w-25 mt-5">Download</button>  
+          </div>
+        </form>
+        <hr class="mt-5">
+        <embed id="archive" src="images/hello_world.png" type="application/pdf" style="margin-top: 35px; border: 1px solid #ccc;" width="100%" max-height="100%">
+      </div>
+    </main>
+    <footer class="footer text-center mt-auto py-3 bg-light">
+      <div class="container">
+        <hr>
+        <span class="text-muted">Desenvolvido por <a href="https://github.com/joelpmartins">Joel Martins</a>.</span>
+      </div>
+    </footer>
+  </body>
+</html>
